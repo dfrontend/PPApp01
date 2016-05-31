@@ -1,8 +1,18 @@
+$font-root-size: 16;
+
 html {
   position: relative;
   min-height: 100%;
+  background-color: transparent;
 }
 
 body {
-
+  background-color: transparent;
+  color: #666;
+  font-family: 'Open Sans', sans-serif;
+  font-size: $font-root-size+px;
 }
+
+
+
+//bootstrap overrides

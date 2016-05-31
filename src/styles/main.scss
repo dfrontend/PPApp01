@@ -10,7 +10,74 @@
 /* Components */
 @import "components/*";
 
-/* Custom SCSS*/
+/* Custom global SCSS*/
 @import "global";
 
+/* Custom styles*/
+.flex-container {
+  @include flexbox();
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include align-items(stretch);
+}
+.left-panel,
+.header-panel,
+.middle-panel,
+.right-panel {
+  @include flex-grow(1);
+  //border: 1px solid red;
+  position: fixed;
+  height: 100%;
+  &.well {
+    margin: 0;
+    @include border-radius(0);
+    padding: 0;
+  }
+}
 
+.left-panel {
+  width: 20%;
+  background-color: transparent;
+}
+.header-panel {
+  width: 80%;
+  height: 80/$font-root-size+rem;
+  margin-left: 20%!important;
+
+}
+.middle-panel {
+  width: 60%;
+  margin: 80/$font-root-size+rem 20% 0 20% !important;
+  background-color: $clr-fff;
+
+}
+.right-panel {
+  width: 20%;
+  right: 0;
+  margin-top: 80/$font-root-size+rem!important;
+}
+
+.brand {
+  display: block;
+  text-align: center;
+  font-size: 40/$font-root-size+rem;
+  line-height: 100%;
+  padding: 20/$font-root-size+rem 0;
+  text-decoration: none;
+  cursor: pointer;
+  color: $clr-000;
+  //border-bottom: 1px solid $clr-gray-bbb;
+  margin-bottom: 20/$font-root-size+rem;
+  &:hover,&:focus,&:active {
+    text-decoration: none;
+    color: $clr-gray;
+  }
+}
+
+.search-module {
+  margin-bottom: 40/$font-root-size+rem;
+}
+
+.first-checkbox {
+  margin-left: 20/$font-root-size+rem;
+}

@@ -1,4 +1,34 @@
 extends ./layouts/template-1.jade
 
+
 block content
-  h1 home page
+  .flex-container
+    aside.well.left-panel
+      a.brand raysource
+      div.input-group.search-module
+        input(type="text" class="form-control" placeholder="Search for...")
+        span(class="input-group-btn")
+          button(class="btn btn-default" type="button")
+            i.icon.icon-search
+
+      section.some-list
+        ul.list-group
+          li.list-group-item
+            a Cras justo odio
+          li.list-group-item
+            a Dapibus ac facilisis in
+          li.list-group-item
+            a Morbi leo risus
+          li.list-group-item
+            a Porta ac consectetur ac
+          li.list-group-item
+            a Vestibulum at eros
+
+    header.well.header-panel
+      div.checkbox.first-checkbox
+        label
+          input(type="checkbox" id="checkboxSuccess" value="option1")
+          | Something to check
+    section.well.middle-panel middle
+    section.well.right-panel right
+    footer.hide
